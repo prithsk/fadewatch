@@ -1,0 +1,562 @@
+{
+ "started": "2026-10-13T05:56:17Z",
+ "mcp_tools": [
+  "get_topology",
+  "get_predictions",
+  "send_telemetry",
+  "get_usage",
+  "load_demo_fleet"
+ ],
+ "skill_recorded": {
+  "fadewatch": {
+   "1min": {
+    "n": 1008,
+    "mae_db": 0.007300660756060598,
+    "coverage_80": 1.0
+   },
+   "3min": {
+    "n": 960,
+    "mae_db": 0.008821818634116062,
+    "coverage_80": 1.0
+   },
+   "5min": {
+    "n": 912,
+    "mae_db": 0.010157884309499175,
+    "coverage_80": 1.0
+   }
+  },
+  "persistence": {
+   "1min": {
+    "n": 1008,
+    "mae_db": 0.0949503968253968,
+    "coverage_80": 0.9216269841269841
+   },
+   "3min": {
+    "n": 960,
+    "mae_db": 0.24995833333333325,
+    "coverage_80": 0.91875
+   },
+   "5min": {
+    "n": 912,
+    "mae_db": 0.35567982456140346,
+    "coverage_80": 0.9320175438596491
+   }
+  }
+ },
+ "served_baseline": {
+  "items": [
+   {
+    "link_id": "SITE-0da7faea0f45__ant0",
+    "horizon_min": 1,
+    "served_p50": 28.02,
+    "replica_p50": 28.02,
+    "served_p10": 27.68656,
+    "replica_p10": 27.686,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-0da7faea0f45__ant0",
+    "horizon_min": 3,
+    "served_p50": 28.02,
+    "replica_p50": 28.02,
+    "served_p10": 27.666719999999998,
+    "replica_p10": 27.442,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-0da7faea0f45__ant0",
+    "horizon_min": 5,
+    "served_p50": 28.02,
+    "replica_p50": 28.02,
+    "served_p10": 27.655584,
+    "replica_p10": 27.274,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-437a27f30da8__ant0",
+    "horizon_min": 1,
+    "served_p50": 21.67,
+    "replica_p50": 21.67,
+    "served_p10": 21.336560000000002,
+    "replica_p10": 21.336,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-437a27f30da8__ant0",
+    "horizon_min": 3,
+    "served_p50": 21.67,
+    "replica_p50": 21.67,
+    "served_p10": 21.31672,
+    "replica_p10": 21.092,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-437a27f30da8__ant0",
+    "horizon_min": 5,
+    "served_p50": 21.67,
+    "replica_p50": 21.67,
+    "served_p10": 21.305584000000003,
+    "replica_p10": 20.924,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-437a27f30da8__ant1",
+    "horizon_min": 1,
+    "served_p50": 21.5,
+    "replica_p50": 21.5,
+    "served_p10": 21.16656,
+    "replica_p10": 21.166,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-437a27f30da8__ant1",
+    "horizon_min": 3,
+    "served_p50": 21.5,
+    "replica_p50": 21.5,
+    "served_p10": 21.14672,
+    "replica_p10": 20.922,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-437a27f30da8__ant1",
+    "horizon_min": 5,
+    "served_p50": 21.5,
+    "replica_p50": 21.5,
+    "served_p10": 21.135584,
+    "replica_p10": 20.754,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant0",
+    "horizon_min": 1,
+    "served_p50": 21.89,
+    "replica_p50": 21.89,
+    "served_p10": 21.55656,
+    "replica_p10": 21.556,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant0",
+    "horizon_min": 3,
+    "served_p50": 21.89,
+    "replica_p50": 21.89,
+    "served_p10": 21.53672,
+    "replica_p10": 21.312,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant0",
+    "horizon_min": 5,
+    "served_p50": 21.89,
+    "replica_p50": 21.89,
+    "served_p10": 21.525584000000002,
+    "replica_p10": 21.144,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant1",
+    "horizon_min": 1,
+    "served_p50": 22.98,
+    "replica_p50": 22.98,
+    "served_p10": 22.64656,
+    "replica_p10": 22.646,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant1",
+    "horizon_min": 3,
+    "served_p50": 22.98,
+    "replica_p50": 22.98,
+    "served_p10": 22.62672,
+    "replica_p10": 22.402,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant1",
+    "horizon_min": 5,
+    "served_p50": 22.98,
+    "replica_p50": 22.98,
+    "served_p10": 22.615584000000002,
+    "replica_p10": 22.234,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant2",
+    "horizon_min": 1,
+    "served_p50": 22.25,
+    "replica_p50": 22.25,
+    "served_p10": 21.91656,
+    "replica_p10": 21.916,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant2",
+    "horizon_min": 3,
+    "served_p50": 22.25,
+    "replica_p50": 22.25,
+    "served_p10": 21.89672,
+    "replica_p10": 21.672,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant2",
+    "horizon_min": 5,
+    "served_p50": 22.25,
+    "replica_p50": 22.25,
+    "served_p10": 21.885584,
+    "replica_p10": 21.504,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant3",
+    "horizon_min": 1,
+    "served_p50": 22.21,
+    "replica_p50": 22.21,
+    "served_p10": 21.87656,
+    "replica_p10": 21.876,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant3",
+    "horizon_min": 3,
+    "served_p50": 22.21,
+    "replica_p50": 22.21,
+    "served_p10": 21.85672,
+    "replica_p10": 21.632,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant3",
+    "horizon_min": 5,
+    "served_p50": 22.21,
+    "replica_p50": 22.21,
+    "served_p10": 21.845584000000002,
+    "replica_p10": 21.464,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant4",
+    "horizon_min": 1,
+    "served_p50": 22.04,
+    "replica_p50": 22.04,
+    "served_p10": 21.70656,
+    "replica_p10": 21.706,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant4",
+    "horizon_min": 3,
+    "served_p50": 22.04,
+    "replica_p50": 22.04,
+    "served_p10": 21.686719999999998,
+    "replica_p10": 21.462,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-5c44ebc4a84e__ant4",
+    "horizon_min": 5,
+    "served_p50": 22.04,
+    "replica_p50": 22.04,
+    "served_p10": 21.675584,
+    "replica_p10": 21.294,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-7576272aee77__ant1",
+    "horizon_min": 1,
+    "served_p50": 32.83,
+    "replica_p50": 32.83,
+    "served_p10": 32.496559999999995,
+    "replica_p10": 32.496,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-7576272aee77__ant1",
+    "horizon_min": 3,
+    "served_p50": 32.83,
+    "replica_p50": 32.83,
+    "served_p10": 32.47672,
+    "replica_p10": 32.252,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-7576272aee77__ant1",
+    "horizon_min": 5,
+    "served_p50": 32.83,
+    "replica_p50": 32.83,
+    "served_p10": 32.465584,
+    "replica_p10": 32.084,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-7576272aee77__ant2",
+    "horizon_min": 1,
+    "served_p50": 33.47,
+    "replica_p50": 33.47,
+    "served_p10": 33.136559999999996,
+    "replica_p10": 33.136,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-7576272aee77__ant2",
+    "horizon_min": 3,
+    "served_p50": 33.47,
+    "replica_p50": 33.47,
+    "served_p10": 33.11672,
+    "replica_p10": 32.892,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-7576272aee77__ant2",
+    "horizon_min": 5,
+    "served_p50": 33.47,
+    "replica_p50": 33.47,
+    "served_p10": 33.105584,
+    "replica_p10": 32.724,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-9c5100cd2d6c__ant0",
+    "horizon_min": 1,
+    "served_p50": -13.08,
+    "replica_p50": -13.08,
+    "served_p10": -13.41344,
+    "replica_p10": -13.414,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-9c5100cd2d6c__ant0",
+    "horizon_min": 3,
+    "served_p50": -13.08,
+    "replica_p50": -13.08,
+    "served_p10": -13.43328,
+    "replica_p10": -13.658,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-9c5100cd2d6c__ant0",
+    "horizon_min": 5,
+    "served_p50": -13.08,
+    "replica_p50": -13.08,
+    "served_p10": -13.444416,
+    "replica_p10": -13.826,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-d7c79f814522__ant0",
+    "horizon_min": 1,
+    "served_p50": 12.98,
+    "replica_p50": 12.98,
+    "served_p10": 12.646560000000001,
+    "replica_p10": 12.646,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-d7c79f814522__ant0",
+    "horizon_min": 3,
+    "served_p50": 12.98,
+    "replica_p50": 12.98,
+    "served_p10": 12.62672,
+    "replica_p10": 12.402,
+    "model_version": "snr-baseline-v1"
+   },
+   {
+    "link_id": "SITE-d7c79f814522__ant0",
+    "horizon_min": 5,
+    "served_p50": 12.98,
+    "replica_p50": 12.98,
+    "served_p10": 12.615584,
+    "replica_p10": 12.234,
+    "model_version": "snr-baseline-v1"
+   }
+  ],
+  "entity_errors": [],
+  "model_release_id": "snr-baseline-v1-20260914T081352Z"
+ },
+ "fleet": {
+  "stations": 6,
+  "links": 14,
+  "satellites": 39
+ },
+ "samples": {
+  "SITE-0da7faea0f45__ant0": 458,
+  "SITE-437a27f30da8__ant0": 96,
+  "SITE-437a27f30da8__ant1": 105,
+  "SITE-5c44ebc4a84e__ant0": 323,
+  "SITE-5c44ebc4a84e__ant1": 426,
+  "SITE-5c44ebc4a84e__ant2": 311,
+  "SITE-5c44ebc4a84e__ant3": 216,
+  "SITE-5c44ebc4a84e__ant4": 300,
+  "SITE-7576272aee77__ant0": 430,
+  "SITE-7576272aee77__ant1": 454,
+  "SITE-7576272aee77__ant2": 452,
+  "SITE-9c5100cd2d6c__ant0": 480,
+  "SITE-d7c79f814522__ant0": 284,
+  "SITE-d7c79f814522__ant2": 275
+ },
+ "alignment": [
+  {
+   "link_id": "SITE-0da7faea0f45__ant0",
+   "sat_id": "norad-44114",
+   "offset_s": 0.0,
+   "az_err_deg": 0.10635118192246296,
+   "el_err_deg": 0.042359726700503586,
+   "range_err_km": 3.717832988166265
+  },
+  {
+   "link_id": "SITE-437a27f30da8__ant0",
+   "sat_id": "norad-58346",
+   "offset_s": 0.0,
+   "az_err_deg": 0.14336743933304774,
+   "el_err_deg": 0.019086026972015446,
+   "range_err_km": 2.5717529802641366
+  },
+  {
+   "link_id": "SITE-437a27f30da8__ant1",
+   "sat_id": "norad-54756",
+   "offset_s": 0.0,
+   "az_err_deg": 0.3443070509427173,
+   "el_err_deg": 0.15913008573171794,
+   "range_err_km": 7.714790330268443
+  },
+  {
+   "link_id": "SITE-5c44ebc4a84e__ant0",
+   "sat_id": "norad-62362",
+   "offset_s": 0.0,
+   "az_err_deg": 0.015628823679548987,
+   "el_err_deg": 0.07738431865256956,
+   "range_err_km": 5.973257587713306
+  },
+  {
+   "link_id": "SITE-5c44ebc4a84e__ant1",
+   "sat_id": "norad-43231",
+   "offset_s": 0.0,
+   "az_err_deg": 0.07267701314043506,
+   "el_err_deg": 0.007275767031032387,
+   "range_err_km": 5.750469894068374
+  },
+  {
+   "link_id": "SITE-5c44ebc4a84e__ant2",
+   "sat_id": "norad-40081",
+   "offset_s": 0.0,
+   "az_err_deg": 0.009033927456215451,
+   "el_err_deg": 0.014047402831842248,
+   "range_err_km": 4.23999701507455
+  },
+  {
+   "link_id": "SITE-5c44ebc4a84e__ant3",
+   "sat_id": "norad-58346",
+   "offset_s": 0.0,
+   "az_err_deg": 0.14100894317422785,
+   "el_err_deg": 0.01858509253304419,
+   "range_err_km": 2.569568953711496
+  },
+  {
+   "link_id": "SITE-5c44ebc4a84e__ant4",
+   "sat_id": "norad-54756",
+   "offset_s": 0.0,
+   "az_err_deg": 0.34202111426205306,
+   "el_err_deg": 0.15780375773089972,
+   "range_err_km": 7.72026552544412
+  },
+  {
+   "link_id": "SITE-7576272aee77__ant0",
+   "sat_id": "norad-40081",
+   "offset_s": 0.0,
+   "az_err_deg": 0.009716256467527273,
+   "el_err_deg": 0.012580066065192241,
+   "range_err_km": 4.884851838060058
+  },
+  {
+   "link_id": "SITE-7576272aee77__ant1",
+   "sat_id": "norad-43231",
+   "offset_s": 0.0,
+   "az_err_deg": 0.05189291567825194,
+   "el_err_deg": 0.03684058019516456,
+   "range_err_km": 7.779808423689246
+  },
+  {
+   "link_id": "SITE-7576272aee77__ant2",
+   "sat_id": "norad-40079",
+   "offset_s": 0.0,
+   "az_err_deg": 0.13309373741245167,
+   "el_err_deg": 0.03599346764929123,
+   "range_err_km": 2.3703576768384664
+  },
+  {
+   "link_id": "SITE-9c5100cd2d6c__ant0",
+   "sat_id": "norad-62256",
+   "offset_s": -2397600.0,
+   "az_err_deg": 0.0825387184676174,
+   "el_err_deg": 0.015154267362603946,
+   "range_err_km": 5.995281122115557
+  },
+  {
+   "link_id": "SITE-d7c79f814522__ant0",
+   "sat_id": "norad-37743",
+   "offset_s": -2397600.0,
+   "az_err_deg": 0.01182156619381658,
+   "el_err_deg": 0.08913363058375623,
+   "range_err_km": 6.105550540530658
+  },
+  {
+   "link_id": "SITE-d7c79f814522__ant2",
+   "sat_id": "norad-38045",
+   "offset_s": -2397600.0,
+   "az_err_deg": 0.012845703854424073,
+   "el_err_deg": 0.05085377459296048,
+   "range_err_km": 4.068957058794695
+  }
+ ],
+ "writeback": [
+  {
+   "accepted_count": 69,
+   "rejected_count": 0,
+   "rejected_indices": null
+  }
+ ],
+ "alerts": [
+  {
+   "severity": "critical",
+   "kind": "CAPACITY",
+   "cause": "capacity",
+   "title": "Pool ATLAGAX1 short of capacity",
+   "event_iso": "2026-10-13T05:56:27Z"
+  },
+  {
+   "severity": "warning",
+   "kind": "NO_CLOSURE",
+   "cause": "link budget",
+   "title": "The Blitz Gateway ant0 \u2192 PROBA-3-CSC does not close",
+   "event_iso": null
+  },
+  {
+   "severity": "warning",
+   "kind": "LOS",
+   "cause": "geometry",
+   "title": "O3B1.WMP ant0 \u2192 O3B-MPOWER-F7 sets below 10\u00b0",
+   "event_iso": "2026-10-13T06:05:31Z"
+  },
+  {
+   "severity": "warning",
+   "kind": "LOS",
+   "cause": "geometry",
+   "title": "O3B1.WMP ant2 \u2192 O3B-FM6 sets below 10\u00b0",
+   "event_iso": "2026-10-13T06:11:16Z"
+  },
+  {
+   "severity": "warning",
+   "kind": "LOS",
+   "cause": "geometry",
+   "title": "CLFN-1 ant0 \u2192 GLOBALSTAR-M081 sets below 10\u00b0",
+   "event_iso": "2026-10-13T06:13:13Z"
+  },
+  {
+   "severity": "warning",
+   "kind": "LOS",
+   "cause": "geometry",
+   "title": "Texas Gateway ant1 \u2192 O3B-FM15 sets below 10\u00b0",
+   "event_iso": "2026-10-13T06:18:01Z"
+  }
+ ]
+}

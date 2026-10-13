@@ -49,7 +49,7 @@ dashboard's Backtest tab).
 * **Forecast error at Constellation's own horizons** (MAE, Fadewatch vs persistence):
   0.22 vs 0.44 dB at 1 min, 0.61 vs 1.84 dB at 5 min. In rain, 1.58 vs 5.39 dB at 5 min; under the
   failing LNA, 0.72 vs 4.38 dB. The 80% interval holds the truth 84% of the time at 5 min,
-  against 71% for persistence.
+  against 57% for persistence.
 * **Closed loop.** Replayed with Fadewatch's plans executed (make-before-break handovers on spare
   antennas, and a spare at Texas Gateway brought up on the satellite whose path the nowcast kept
   clearest), pool DLLSTXX1's unserved traffic fell from 22.3 to 7.0 Gbit (−69%), and handover gaps
@@ -58,6 +58,30 @@ dashboard's Backtest tab).
   and stops extrapolating it, but its 5-minute error during the burst (8.4 dB) is no better than
   persistence's (7.8 dB). Phoenix Gateway has a single antenna, so its handover gap and its failing LNA
   cannot be planned away, only warned about early.
+
+### On a real Constellation account
+
+`fadewatch live` ran against a free-tier account on 2026-10-13 (sanitised report:
+[data/live-results.json](data/live-results.json)). It loaded the demo fleet through Constellation's MCP
+server, pulled 4,610 samples of recorded telemetry over 14 live links from `/topology/series`, and scored
+both models on them:
+
+| MAE on Constellation's recorded telemetry | 1 min | 3 min | 5 min |
+|---|---|---|---|
+| **Fadewatch** | **0.007 dB** | **0.009 dB** | **0.010 dB** |
+| Persistence (`snr-baseline-v1` replica) | 0.095 dB | 0.250 dB | 0.356 dB |
+
+* **The replica is the real model.** One `/predictions` call (36 forecasts, release
+  `snr-baseline-v1-20260914T081352Z`) matched the replica's median exactly on every item. The served
+  80% band barely widens with horizon (±0.33 dB at 1 min, ±0.36 dB at 5 min), so the replica now uses
+  those measured widths, and every number in this README is against them.
+* **It wrote back.** All 69 records were accepted: per-link forecasts and rain as `telemetry` and
+  `attenuation`, plus current TLEs for all 39 satellites through the satellite contract.
+* **The replay offset moves.** The demo fleet is re-stamped on every load: today its LEO links matched
+  SGP4 at −27.75 days (−25.5 days in the published snapshot). Fadewatch found it unaided.
+* **The recorded telemetry is clear-sky and fault-free.** The 35× gap above is pure geometry. It shows
+  that the physics model reproduces Constellation's data almost exactly; the storm and fault results come
+  from the replay.
 
 ## What Fadewatch found in the demo fleet
 
@@ -214,14 +238,13 @@ tier allows 10 a month. Write-back uses the canonical families: `attenuation` (r
 * The headline numbers come from a simulated truth. The orbits, stations, RF configuration and
   starting state are the real demo fleet, but the storm, the faults and the noise are injected. The
   demo fleet's own SNR follows a link budget to 0.003 dB, so geometry-driven forecasting should
-  transfer to Constellation's recorded telemetry. `fadewatch live` scores both models on it, and that
-  run hasn't happened yet: it needs an API key.
+  transfer to Constellation's recorded telemetry, and it does: see "On a real Constellation account".
 * The nowcast is idealised. It holds intensity constant and errs in motion and intensity, but real
   radar nowcasts also miss initiation and suffer from beam blockage. When the storm intensifies, the
   15-minute-ahead forecast underestimates the fade. You can see it in the video: the band tightens on
   the truth as the cell matures.
-* The persistence replica's interval widens as √h. That shape is an assumption, anchored on the
-  documented 1-minute example; `--spend-prediction` checks it against the served model.
+* The persistence replica's interval widths come from one call to the served model (36 forecasts). If
+  Constellation changes them, `fadewatch live --spend-prediction` re-measures.
 * Lead times are capped by the 30-minute horizon and by the replay starting at the snapshot.
 
 ## Repository

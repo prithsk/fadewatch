@@ -64,7 +64,9 @@ class Forecast:
 class PersistenceBaseline:
     name = "snr-baseline-v1 (replica)"
     window_s = 240.0
-    sigma_1min = 0.333696 / Z80
+    # 80 % half-widths measured from the served model on 2026-10-13 (36 items, one call):
+    # the band barely widens with horizon. Interpolated linearly in between.
+    half_width = {60.0: 0.33344, 180.0: 0.35328, 300.0: 0.364416}
 
     def forecast(self, link_id: str, history: list[LinkSample], issue_t: float,
                  horizons_s: np.ndarray = STD_HORIZONS_S) -> Forecast:
@@ -74,9 +76,9 @@ class PersistenceBaseline:
             nan = np.full(h.shape, np.nan)
             return Forecast(link_id, "", self.name, issue_t, h, nan, nan, nan, error="insufficient_telemetry")
         last = recent[-1]
-        sig = self.sigma_1min * np.sqrt(h / 60.0)
+        hw = np.interp(h, list(self.half_width), list(self.half_width.values()))
         p50 = np.full(h.shape, last.snr_db)
-        return Forecast(link_id, last.target, self.name, issue_t, h, p50 - Z80 * sig, p50, p50 + Z80 * sig, last=last)
+        return Forecast(link_id, last.target, self.name, issue_t, h, p50 - hw, p50, p50 + hw, last=last)
 
 
 @dataclass

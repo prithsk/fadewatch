@@ -6,10 +6,13 @@ satellite sets, a storm fades a Ka-band path, a receive chain degrades or a dema
 capacity, and it plans what to do about each. It runs on [Constellation](https://constellation.space)'s
 API, MCP server and [demo fleet](https://huggingface.co/datasets/constellationspace/demo-fleet).
 
-![Fadewatch dashboard during the Texas storm](docs/dashboard.jpg)
+![Fadewatch: a link locked on during the Texas storm](docs/storm.jpg)
 
-▶ **[Demo video (2 min)](docs/fadewatch-demo.mp4)**. Or run the dashboard yourself in under a minute:
-`pip install -e . && fadewatch serve`, then open `http://127.0.0.1:8765/?tour`.
+▶ **[Demo video (1:48, with sound)](docs/fadewatch-demo.mp4)**. Or run it yourself in under a minute:
+`pip install -e . && fadewatch serve`, then open `http://127.0.0.1:8765/?tour` for the guided replay, or
+without `?tour` to fly it yourself.
+
+![The whole fleet at dusk: the terminator crossing the US, link beams to the O3b ring](docs/globe.jpg)
 
 ## Why this exists
 
@@ -147,7 +150,7 @@ pip install -e ".[all]"        # numpy, sgp4, httpx; fastapi/uvicorn, mcp, pytes
 fadewatch findings             # the demo fleet against SGP4 and a link budget
 fadewatch watch -v             # the agent narrating the demo scenario, alert by alert
 fadewatch backtest             # the scorecard above (writes data/scorecard.json)
-fadewatch serve                # dashboard on http://127.0.0.1:8765 (add ?tour for the guided replay)
+fadewatch serve                # the globe on http://127.0.0.1:8765 (add ?tour for the guided replay)
 pytest                         # 32 tests: ITU-R tables, calibration, replay offsets, engine, API client
 ```
 
@@ -168,10 +171,30 @@ Tools: `predicted_drops`, `forecast_link`, `explain_link`, `handover_plans`, `po
 * *"Why is Texas Gateway ant1 at 4 dB? Show me the link budget."*
 * *"Compare Constellation's forecast for SITE-7576272aee77__ant1 with Fadewatch's."*
 
+### The globe
+
+A three.js scene in the Earth-fixed frame, lit by the real sun for the replay time: NASA Blue Marble by day
+(plus a 0.9 km/pixel patch over the southern US for close-ups), Black Marble city lights after dusk,
+drifting clouds and an atmosphere. Satellites fly true-scale orbits with trails; link beams flow from
+satellite to ground, coloured by margin; the Texas storm is a radar-reflectivity volume with rain shafts
+and the nowcast's predicted positions.
+
+* Click a contact or a ground station to lock on: the camera flies to the station looking up the beam,
+  and the card shows the forecast against persistence and what actually happened.
+* `1` `2` `3` switch sensor looks (optical, thermal, night vision); `S` opens the scorecard; `Space`
+  pauses; arrow keys step a minute; `Esc` returns to the whole fleet.
+* The guided tour and the video are rendered frame by frame from the same page (`scripts/record_demo.py`);
+  the soundtrack is synthesised from the tour's cues (`scripts/soundtrack.py`).
+
 ### On your Constellation account
 
+Put your key in a `.env` file next to `pyproject.toml` (git-ignored), never in code or chat:
+
+```
+CONSTELLATION_API_KEY=cos_live_...   # scopes: telemetry:write, topology:read, predictions:read
+```
+
 ```bash
-export CONSTELLATION_API_KEY=cos_live_...   # scopes: telemetry:write, topology:read, predictions:read
 fadewatch live                      # load_demo_fleet over MCP, pull /topology and 2 h of /topology/series,
                                     # forecast, score both models on the recorded telemetry,
                                     # and write the results back as telemetry
@@ -206,11 +229,13 @@ tier allows 10 a month. Write-back uses the canonical families: `attenuation` (r
 ```
 fadewatch/   orbit · align · atmosphere · linkbudget · weather · forecast · engine · simulate
              backtest · constellation (REST + MCP client) · live · session · mcp_server · site · cli
-web/         the dashboard (vanilla JS, canvas, globe.gl) and its replay bundle
+web/         the globe and HUD (three.js, vanilla JS modules, no build step) and its replay bundle
 data/        demo fleet (CC BY 4.0, Constellation Space), CelesTrak elements, scorecard
-scripts/     record_demo.py renders the guided tour to MP4, frame by frame
+scripts/     record_demo.py renders the guided tour to MP4 frame by frame; soundtrack.py synthesises its audio
 tests/       pytest
 ```
 
 Demo fleet © Constellation Space, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-Orbital elements from [CelesTrak](https://celestrak.org). Code under the MIT licence.
+Orbital elements from [CelesTrak](https://celestrak.org). Earth imagery: NASA Blue Marble Next Generation
+and Black Marble 2016 (public domain). Outlines: Natural Earth via world-atlas and us-atlas.
+three.js (MIT). Code under the MIT licence.

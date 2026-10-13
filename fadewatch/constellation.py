@@ -32,8 +32,25 @@ MAX_BODY = 1_048_576
 TOPOLOGY_MEASUREMENTS = ("link", "satellite", "ground_station", "weather", "attenuation", "telemetry")
 
 
+def _dotenv() -> dict[str, str]:
+    """KEY=value lines from a .env in the working directory or the repo root (never committed)."""
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for d in (os.getcwd(), here):
+        path = os.path.join(d, ".env")
+        if os.path.exists(path):
+            out = {}
+            for line in open(path, encoding="utf-8-sig"):
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    out[k.strip().removeprefix("export ").strip()] = v.strip().strip('"').strip("'")
+            return out
+    return {}
+
+
 def api_key_from_env() -> str | None:
-    return os.environ.get("CONSTELLATION_API_KEY") or os.environ.get("CONSTELLATION_API_TOKEN")
+    env = {**_dotenv(), **{k: v for k, v in os.environ.items() if k.startswith("CONSTELLATION_")}}
+    return env.get("CONSTELLATION_API_KEY") or env.get("CONSTELLATION_API_TOKEN")
 
 
 class ConstellationError(Exception):

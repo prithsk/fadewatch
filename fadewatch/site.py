@@ -31,6 +31,51 @@ def _arr(a, nd=2):
     return [_r(v, nd) for v in a]
 
 
+STATION_CODE = {"Phoenix Gateway": "PHX", "RANDOLPH RIDGE": "RDG", "O3B1.WMP": "WMP", "Texas Gateway": "TXG",
+                "The Blitz Gateway": "BLZ", "CLFN-1": "CLF"}
+
+
+def short_alert(a: dict, fleet) -> tuple[str, str, str]:
+    """HUD-sized labels: (code, tag, act). The full sentences stay in title/detail/action."""
+    ev = a.get("evidence") or {}
+    if a.get("link_id"):
+        st = fleet.stations[fleet.antennas[a["link_id"]].station_id]
+        code = f"{STATION_CODE.get(st.name, st.name[:3].upper())}·A{a['link_id'].split('__ant')[1]}"
+    else:
+        code = a.get("pool_id") or ""
+    kind, cause = a["kind"], a["cause"]
+    tag = {"LOS": "LOS", "DEGRADATION": "RX DRIFT", "INTERFERENCE": "RFI STEP", "NO_CLOSURE": "NO CLOSE",
+           "CAPACITY": "CAPACITY"}.get(kind, "")
+    act = ""
+    if kind == "LOS":
+        pl = ev.get("plan") or {}
+        succ = pl.get("successor_name") or ""
+        if pl.get("mode") == "make-before-break":
+            act = f"MBB  A{pl['antenna'].split('__ant')[1]} → {succ}"
+        elif succ:
+            act = f"slew → {succ}  {pl.get('gap_s', 75):.0f} s gap"
+        else:
+            act = "release antenna"
+    elif kind == "FADE":
+        tag = {"rain": "RAIN FADE", "equipment": "HW FADE"}.get(cause, "FADE")
+        if "rain_db" in ev:
+            c0, c1 = ev.get("capacity_mbps", [0, 0])
+            act = f"−{ev['rain_db']:.0f} dB  {c0}→{c1} Mbps"
+        elif "p50_at_cross" in ev:
+            act = f"below closure"
+    elif kind == "DEGRADATION":
+        act = f"{ev.get('trend_db_min', 0):+.2f} dB/min  −{ev.get('deficit_db', 0):.1f} dB"
+    elif kind == "INTERFERENCE":
+        act = f"−{ev.get('step_db', 0):.0f} dB step"
+    elif kind == "CAPACITY":
+        act = f"{ev.get('min_capacity_mbps', 0):.0f} / {ev.get('demand_p99_mbps', 0):.0f} Mbps"
+        if ev.get("diversity"):
+            act += f"  +A{ev['diversity']['antenna'].split('__ant')[1]}"
+    elif kind == "NO_CLOSURE":
+        act = f"{ev.get('snr_db', 0):.1f} dB  {cause}"
+    return code, tag, act
+
+
 def build_bundle(scenario: str = "demo", closed_loop: bool = True, log=print) -> dict:
     t_start = time.time()
     ctx = load_context()
@@ -47,7 +92,7 @@ def build_bundle(scenario: str = "demo", closed_loop: bool = True, log=print) ->
     ants = sorted(fleet.antennas)
 
     # Satellite tracks every 30 s across the replay (with replay offsets applied).
-    ts = np.arange(ticks[0], ticks[-1] + 31, 30.0)
+    ts = np.arange(ticks[0] - 900, ticks[-1] + 931, 30.0)  # 15 min either side, for orbit trails
     tracks = {}
     for s in sat_ids:
         if s in ctx.prop:
@@ -94,11 +139,16 @@ def build_bundle(scenario: str = "demo", closed_loop: bool = True, log=print) ->
             strings.append(x)
         return sidx[x]
 
-    ALERT_FIELDS = ("id", "kind", "cause", "severity", "station_id", "link_id", "pool_id", "title", "detail", "action")
+    ALERT_FIELDS = ("id", "kind", "cause", "severity", "station_id", "link_id", "pool_id", "title", "detail", "action",
+                    "code", "tag", "act")
     alert_ticks = {"fields": list(ALERT_FIELDS) + ["raised_t", "event_t"], "strings": strings, "ticks": []}
     for alerts in tlog.alerts:
-        alert_ticks["ticks"].append([[intern(a[k]) for k in ALERT_FIELDS] + [_r(a["raised_t"], 0), _r(a["event_t"], 0)]
-                                     for a in alerts])
+        rows = []
+        for a in alerts:
+            a = dict(a)
+            a["code"], a["tag"], a["act"] = short_alert(a, fleet)
+            rows.append([intern(a[k]) for k in ALERT_FIELDS] + [_r(a["raised_t"], 0), _r(a["event_t"], 0)])
+        alert_ticks["ticks"].append(rows)
 
     caps_true = pool_capacity_truth(ctx, rec)
     pools = []

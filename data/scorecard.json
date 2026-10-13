@@ -1,0 +1,582 @@
+{
+ "summary": {
+  "los": {
+   "events": 12,
+   "fadewatch_warned_60s": 12,
+   "persistence_warned_60s": 0,
+   "fadewatch_median_lead_min": 15.125,
+   "persistence_median_lead_min": 0.0
+  },
+  "closure": {
+   "events": 2,
+   "fadewatch_warned_60s": 2,
+   "persistence_warned_60s": 0,
+   "fadewatch_median_lead_min": 30.75,
+   "persistence_median_lead_min": 0.625
+  },
+  "pool": {
+   "events": 5,
+   "fadewatch_warned_60s": 5,
+   "persistence_warned_60s": 0,
+   "fadewatch_median_lead_min": 9.75,
+   "persistence_median_lead_min": 0.0
+  }
+ },
+ "skill": {
+  "fadewatch": {
+   "all": {
+    "1min": {
+     "n": 2518,
+     "mae_db": 0.2249237055491538,
+     "rmse_db": 0.712216595963884,
+     "coverage_80": 0.7978554408260524,
+     "width_80_db": 0.8981414383247786,
+     "pinball_db": 0.08548154518942401
+    },
+    "3min": {
+     "n": 2362,
+     "mae_db": 0.39795159623483023,
+     "rmse_db": 1.1926644711818557,
+     "coverage_80": 0.8272650296359018,
+     "width_80_db": 1.2417247061213794,
+     "pinball_db": 0.15285391007404556
+    },
+    "5min": {
+     "n": 2218,
+     "mae_db": 0.6065523182951271,
+     "rmse_db": 1.6533160270558553,
+     "coverage_80": 0.8426510369702435,
+     "width_80_db": 1.6171164965968643,
+     "pinball_db": 0.2355286849909214
+    }
+   },
+   "steady": {
+    "1min": {
+     "n": 1704,
+     "mae_db": 0.11179299481080149,
+     "rmse_db": 0.5103835200638352,
+     "coverage_80": 0.789906103286385,
+     "width_80_db": 0.27191316042133706,
+     "pinball_db": 0.03848256329254477
+    },
+    "3min": {
+     "n": 1571,
+     "mae_db": 0.1657445813262052,
+     "rmse_db": 0.8270090465163317,
+     "coverage_80": 0.8637810311903247,
+     "width_80_db": 0.3565719316675466,
+     "pinball_db": 0.06229000152804309
+    },
+    "5min": {
+     "n": 1442,
+     "mae_db": 0.2248765289536288,
+     "rmse_db": 1.0643605284927606,
+     "coverage_80": 0.9070735090152566,
+     "width_80_db": 0.4506119913110685,
+     "pinball_db": 0.08755983854400251
+    }
+   },
+   "low elevation": {
+    "5min": {
+     "n": 157,
+     "mae_db": 0.14862418524249582,
+     "rmse_db": 0.17967605883495671,
+     "coverage_80": 0.8726114649681529,
+     "width_80_db": 0.5322421469817621,
+     "pinball_db": 0.04475195339901981
+    },
+    "1min": {
+     "n": 179,
+     "mae_db": 0.15826284286364672,
+     "rmse_db": 0.19463607615247194,
+     "coverage_80": 0.7597765363128491,
+     "width_80_db": 0.46401807929665256,
+     "pinball_db": 0.04812914261560441
+    },
+    "3min": {
+     "n": 164,
+     "mae_db": 0.1525804704957963,
+     "rmse_db": 0.1902968346055808,
+     "coverage_80": 0.8170731707317073,
+     "width_80_db": 0.4963258616891006,
+     "pinball_db": 0.04696754535832012
+    }
+   },
+   "rain": {
+    "5min": {
+     "n": 429,
+     "mae_db": 1.5765169219165354,
+     "rmse_db": 2.273473474280014,
+     "coverage_80": 0.7389277389277389,
+     "width_80_db": 6.459455235652246,
+     "pinball_db": 0.5507370652234207
+    },
+    "3min": {
+     "n": 437,
+     "mae_db": 1.018242321718607,
+     "rmse_db": 1.471978740471537,
+     "coverage_80": 0.8054919908466819,
+     "width_80_db": 4.987323982818042,
+     "pinball_db": 0.3628260922135314
+    },
+    "1min": {
+     "n": 445,
+     "mae_db": 0.5301991270299432,
+     "rmse_db": 0.7715021872840396,
+     "coverage_80": 0.8943820224719101,
+     "width_80_db": 3.5521832876561077,
+     "pinball_db": 0.2116936020802411
+    }
+   },
+   "equipment": {
+    "5min": {
+     "n": 166,
+     "mae_db": 0.7197907097061756,
+     "rmse_db": 1.5034893120175092,
+     "coverage_80": 0.6385542168674698,
+     "width_80_db": 0.33206162109613097,
+     "pinball_db": 0.33370404199760534
+    },
+    "3min": {
+     "n": 166,
+     "mae_db": 0.41389481685121865,
+     "rmse_db": 0.8952951231984099,
+     "coverage_80": 0.6325301204819277,
+     "width_80_db": 0.27227180519404914,
+     "pinball_db": 0.18624141509239098
+    },
+    "1min": {
+     "n": 166,
+     "mae_db": 0.1855304054546897,
+     "rmse_db": 0.39470890230851424,
+     "coverage_80": 0.6927710843373494,
+     "width_80_db": 0.21468338778246468,
+     "pinball_db": 0.07837331248446515
+    }
+   },
+   "interference": {
+    "5min": {
+     "n": 24,
+     "mae_db": 8.413169701290357,
+     "rmse_db": 8.73579599624095,
+     "coverage_80": 0.041666666666666664,
+     "width_80_db": 1.1329731545156667,
+     "pinball_db": 4.060591978888166
+    },
+    "3min": {
+     "n": 24,
+     "mae_db": 5.869804237231521,
+     "rmse_db": 7.0695752457991965,
+     "coverage_80": 0.25,
+     "width_80_db": 2.780171239094703,
+     "pinball_db": 2.750399523038551
+    },
+    "1min": {
+     "n": 24,
+     "mae_db": 3.366538321198652,
+     "rmse_db": 4.72524456396204,
+     "coverage_80": 0.5833333333333334,
+     "width_80_db": 4.115078115453176,
+     "pinball_db": 1.409979317089651
+    }
+   }
+  },
+  "persistence": {
+   "all": {
+    "1min": {
+     "n": 2536,
+     "mae_db": 0.4395117743946902,
+     "rmse_db": 0.9782063394136483,
+     "coverage_80": 0.7405362776025236,
+     "width_80_db": 0.6673919999999999,
+     "pinball_db": 0.18710653274994135
+    },
+    "3min": {
+     "n": 2389,
+     "mae_db": 1.1452812004294712,
+     "rmse_db": 2.5204151596378357,
+     "coverage_80": 0.7287568020092089,
+     "width_80_db": 1.1559568525650061,
+     "pinball_db": 0.5201356669197037
+    },
+    "5min": {
+     "n": 2242,
+     "mae_db": 1.8439520306000992,
+     "rmse_db": 4.007386022253538,
+     "coverage_80": 0.7123104371097234,
+     "width_80_db": 1.492333879639539,
+     "pinball_db": 0.8491326748801237
+    }
+   },
+   "steady": {
+    "1min": {
+     "n": 1716,
+     "mae_db": 0.1928240895650562,
+     "rmse_db": 0.5433384937525857,
+     "coverage_80": 0.8951048951048951,
+     "width_80_db": 0.667392,
+     "pinball_db": 0.07845478667000079
+    },
+    "3min": {
+     "n": 1592,
+     "mae_db": 0.3852805884732743,
+     "rmse_db": 1.071297604600572,
+     "coverage_80": 0.8976130653266332,
+     "width_80_db": 1.1559568525650061,
+     "pinball_db": 0.17094875969449166
+    },
+    "5min": {
+     "n": 1463,
+     "mae_db": 0.511690140447217,
+     "rmse_db": 1.4299103939942106,
+     "coverage_80": 0.9084073820915927,
+     "width_80_db": 1.4923338796395387,
+     "pinball_db": 0.22763515444164306
+    }
+   },
+   "low elevation": {
+    "5min": {
+     "n": 157,
+     "mae_db": 0.8946761959432746,
+     "rmse_db": 1.581241502671975,
+     "coverage_80": 0.802547770700637,
+     "width_80_db": 1.4923338796395387,
+     "pinball_db": 0.3478389081100178
+    },
+    "1min": {
+     "n": 183,
+     "mae_db": 0.29796085696198615,
+     "rmse_db": 0.3921182268713546,
+     "coverage_80": 0.6830601092896175,
+     "width_80_db": 0.6673919999999995,
+     "pinball_db": 0.09983381956747095
+    },
+    "3min": {
+     "n": 167,
+     "mae_db": 0.5655424159006318,
+     "rmse_db": 0.9469063018382805,
+     "coverage_80": 0.7904191616766467,
+     "width_80_db": 1.155956852565005,
+     "pinball_db": 0.21452070509084128
+    }
+   },
+   "rain": {
+    "5min": {
+     "n": 432,
+     "mae_db": 5.394371364560329,
+     "rmse_db": 7.989565608391228,
+     "coverage_80": 0.3194444444444444,
+     "width_80_db": 1.4923338796395393,
+     "pinball_db": 2.5373842782843856
+    },
+    "3min": {
+     "n": 440,
+     "mae_db": 3.304324544509641,
+     "rmse_db": 4.964311953879149,
+     "coverage_80": 0.39545454545454545,
+     "width_80_db": 1.1559568525650064,
+     "pinball_db": 1.5366665528271735
+    },
+    "1min": {
+     "n": 447,
+     "mae_db": 1.1377165578598547,
+     "rmse_db": 1.7269927681007051,
+     "coverage_80": 0.48322147651006714,
+     "width_80_db": 0.667392,
+     "pinball_db": 0.5104538348135435
+    }
+   },
+   "equipment": {
+    "5min": {
+     "n": 166,
+     "mae_db": 4.381961272763439,
+     "rmse_db": 4.450900559842444,
+     "coverage_80": 0.006024096385542169,
+     "width_80_db": 1.4923338796395391,
+     "pinball_db": 1.9922634135281552
+    },
+    "3min": {
+     "n": 166,
+     "mae_db": 2.701389516796519,
+     "rmse_db": 2.721261361542043,
+     "coverage_80": 0.0,
+     "width_80_db": 1.1559568525650072,
+     "pinball_db": 1.1965671780562586
+    },
+    "1min": {
+     "n": 166,
+     "mae_db": 0.9221614128207626,
+     "rmse_db": 0.9281339870261972,
+     "coverage_80": 0.0,
+     "width_80_db": 0.6673919999999997,
+     "pinball_db": 0.3720951064103814
+    }
+   },
+   "interference": {
+    "5min": {
+     "n": 24,
+     "mae_db": 7.8041505666357125,
+     "rmse_db": 8.554392394434117,
+     "coverage_80": 0.125,
+     "width_80_db": 1.4923338796395385,
+     "pinball_db": 3.71869927897134
+    },
+    "3min": {
+     "n": 24,
+     "mae_db": 5.247127006195171,
+     "rmse_db": 6.850961956190046,
+     "coverage_80": 0.25,
+     "width_80_db": 1.1559568525650068,
+     "pinball_db": 2.4943870952531495
+    },
+    "1min": {
+     "n": 24,
+     "mae_db": 2.8146162273188673,
+     "rmse_db": 4.162133716528825,
+     "coverage_80": 0.041666666666666664,
+     "width_80_db": 0.6673919999999995,
+     "pinball_db": 1.3193130133960582
+    }
+   }
+  }
+ },
+ "alerts": {
+  "confirmed": 23,
+  "false": 0,
+  "unverifiable": 1,
+  "precision": 1.0
+ },
+ "open_loop": {
+  "links": {
+   "handovers": 12,
+   "handover_gap_s": 1575.0,
+   "make_before_break": 0,
+   "link_hours_closed": 9.354166666666668
+  },
+  "pools": {
+   "ASHNVAX2": {
+    "unserved_gbit": 0.0,
+    "minutes_below_p50": 0.0,
+    "minutes_below_p99": 0.0
+   },
+   "ATLAGAX1": {
+    "unserved_gbit": 493.0939612578,
+    "minutes_below_p50": 75.25,
+    "minutes_below_p99": 75.25
+   },
+   "DLLSTXX1": {
+    "unserved_gbit": 22.327520437885717,
+    "minutes_below_p50": 10.25,
+    "minutes_below_p99": 13.75
+   },
+   "TMPEAZX1": {
+    "unserved_gbit": 50.069033775200005,
+    "minutes_below_p50": 11.0,
+    "minutes_below_p99": 11.0
+   }
+  }
+ },
+ "closed_loop": {
+  "links": {
+   "handovers": 12,
+   "handover_gap_s": 1200.0,
+   "make_before_break": 5,
+   "link_hours_closed": 11.15
+  },
+  "pools": {
+   "ASHNVAX2": {
+    "unserved_gbit": 0.0,
+    "minutes_below_p50": 0.0,
+    "minutes_below_p99": 0.0
+   },
+   "ATLAGAX1": {
+    "unserved_gbit": 493.0939612578,
+    "minutes_below_p50": 75.25,
+    "minutes_below_p99": 75.25
+   },
+   "DLLSTXX1": {
+    "unserved_gbit": 6.980647813428571,
+    "minutes_below_p50": 5.0,
+    "minutes_below_p99": 7.0
+   },
+   "TMPEAZX1": {
+    "unserved_gbit": 50.069033775200005,
+    "minutes_below_p50": 11.0,
+    "minutes_below_p99": 11.0
+   }
+  }
+ },
+ "events": [
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:09:00Z",
+   "t": 1791673740.0,
+   "link_id": "SITE-d7c79f814522__ant1",
+   "pool_id": null,
+   "fadewatch_lead_s": 120.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:16:45Z",
+   "t": 1791674205.0,
+   "link_id": "SITE-0da7faea0f45__ant0",
+   "pool_id": null,
+   "fadewatch_lead_s": 585.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "pool",
+   "iso": "2026-10-10T23:16:45Z",
+   "t": 1791674205.0,
+   "link_id": null,
+   "pool_id": "TMPEAZX1",
+   "fadewatch_lead_s": 585.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:19:00Z",
+   "t": 1791674340.0,
+   "link_id": "SITE-d7c79f814522__ant2",
+   "pool_id": null,
+   "fadewatch_lead_s": 720.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:21:30Z",
+   "t": 1791674490.0,
+   "link_id": "SITE-d7c79f814522__ant0",
+   "pool_id": null,
+   "fadewatch_lead_s": 870.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:22:45Z",
+   "t": 1791674565.0,
+   "link_id": "SITE-5c44ebc4a84e__ant7",
+   "pool_id": null,
+   "fadewatch_lead_s": 945.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "pool",
+   "iso": "2026-10-10T23:32:00Z",
+   "t": 1791675120.0,
+   "link_id": null,
+   "pool_id": "DLLSTXX1",
+   "fadewatch_lead_s": 585.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:34:15Z",
+   "t": 1791675255.0,
+   "link_id": "SITE-d7c79f814522__ant2",
+   "pool_id": null,
+   "fadewatch_lead_s": 840.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "closure",
+   "iso": "2026-10-10T23:37:00Z",
+   "t": 1791675420.0,
+   "link_id": "SITE-7576272aee77__ant0",
+   "pool_id": null,
+   "fadewatch_lead_s": 1800.0,
+   "persistence_lead_s": 30.0
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:47:30Z",
+   "t": 1791676050.0,
+   "link_id": "SITE-5c44ebc4a84e__ant6",
+   "pool_id": null,
+   "fadewatch_lead_s": 1800.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:49:45Z",
+   "t": 1791676185.0,
+   "link_id": "SITE-d7c79f814522__ant2",
+   "pool_id": null,
+   "fadewatch_lead_s": 855.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-10T23:53:00Z",
+   "t": 1791676380.0,
+   "link_id": "SITE-7576272aee77__ant0",
+   "pool_id": null,
+   "fadewatch_lead_s": 1800.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "pool",
+   "iso": "2026-10-10T23:53:00Z",
+   "t": 1791676380.0,
+   "link_id": null,
+   "pool_id": "DLLSTXX1",
+   "fadewatch_lead_s": 300.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-11T00:05:30Z",
+   "t": 1791677130.0,
+   "link_id": "SITE-5c44ebc4a84e__ant0",
+   "pool_id": null,
+   "fadewatch_lead_s": 1800.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-11T00:11:15Z",
+   "t": 1791677475.0,
+   "link_id": "SITE-5c44ebc4a84e__ant2",
+   "pool_id": null,
+   "fadewatch_lead_s": 1800.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "closure",
+   "iso": "2026-10-11T00:12:30Z",
+   "t": 1791677550.0,
+   "link_id": "SITE-0da7faea0f45__ant0",
+   "pool_id": null,
+   "fadewatch_lead_s": 1890.0,
+   "persistence_lead_s": 45.0
+  },
+  {
+   "type": "pool",
+   "iso": "2026-10-11T00:12:30Z",
+   "t": 1791677550.0,
+   "link_id": null,
+   "pool_id": "TMPEAZX1",
+   "fadewatch_lead_s": 1650.0,
+   "persistence_lead_s": 45.0
+  },
+  {
+   "type": "los",
+   "iso": "2026-10-11T00:18:00Z",
+   "t": 1791677880.0,
+   "link_id": "SITE-7576272aee77__ant1",
+   "pool_id": null,
+   "fadewatch_lead_s": 1800.0,
+   "persistence_lead_s": null
+  },
+  {
+   "type": "pool",
+   "iso": "2026-10-11T00:18:00Z",
+   "t": 1791677880.0,
+   "link_id": null,
+   "pool_id": "DLLSTXX1",
+   "fadewatch_lead_s": 60.0,
+   "persistence_lead_s": null
+  }
+ ]
+}

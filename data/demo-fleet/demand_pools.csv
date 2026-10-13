@@ -1,0 +1,5 @@
+pool_id,interval_start,inlet_bytes,evidence_kind
+ASHNVAX2,2026-10-10T23:00:00Z,9591470498.0,synthetic_offered
+ATLAGAX1,2026-10-10T23:00:00Z,8190929589.0,synthetic_offered
+DLLSTXX1,2026-10-10T23:00:00Z,7170037698.0,synthetic_offered
+TMPEAZX1,2026-10-10T23:00:00Z,5689662929.0,synthetic_offered

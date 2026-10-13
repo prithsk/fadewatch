@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fadewatch</title>
+<meta name="description" content="Physics-informed early warning for satellite link fades, replayed on Constellation's demo fleet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">
+    <span class="mark">Fadewatch</span>
+    <span class="tagline">sees satellite links fail before they do</span>
+  </div>
+  <nav class="tabs" aria-label="Views">
+    <button class="tab" data-view="board" aria-current="page">Board</button>
+    <button class="tab" data-view="backtest">Backtest</button>
+    <button class="tab" data-view="findings">Findings</button>
+  </nav>
+  <div class="clock">
+    <button id="play" class="play" aria-label="Pause replay"><span aria-hidden="true">❚❚</span></button>
+    <label class="speed"><span class="sr">Replay speed</span>
+      <select id="speed">
+        <option value="1">1×</option><option value="10">10×</option>
+        <option value="30" selected>30×</option><option value="40">40×</option><option value="60">60×</option>
+      </select>
+    </label>
+    <div class="time"><span id="utc">--:--:--</span><small>UTC</small></div>
+    <div class="since" id="since" title="Time since the demo-fleet snapshot">T+00:00</div>
+  </div>
+</header>
+
+<div class="timeline-wrap">
+  <canvas id="timeline" aria-label="Replay timeline: click to jump"></canvas>
+</div>
+
+<main id="board" class="board">
+  <section class="p globe-p" aria-label="Fleet globe">
+    <div id="globe"></div>
+    <div class="globe-key">
+      <span><i class="k ok"></i>margin to spare</span>
+      <span><i class="k thin"></i>thin margin</span>
+      <span><i class="k fail"></i>failing or about to</span>
+      <span class="note">Satellite altitudes above MEO drawn compressed</span>
+    </div>
+    <div class="globe-stats" id="globe-stats"></div>
+  </section>
+
+  <section class="p feed-p" aria-label="Predicted events">
+    <h2>Coming up</h2>
+    <ol id="alerts" class="alerts"></ol>
+  </section>
+
+  <section class="p storm-p" aria-label="Slant paths and rain">
+    <h2 id="storm-title">Slant paths</h2>
+    <canvas id="storm"></canvas>
+    <div class="storm-key">
+      <span class="radar" aria-hidden="true"></span>
+      <span>Rain rate, 1 → 60 mm/h</span>
+      <span class="ghost">Dashed: where the nowcast puts each cell in 10 and 20 min</span>
+    </div>
+  </section>
+
+  <section class="p link-p" aria-label="Selected link">
+    <div class="link-head">
+      <h2 id="link-title">Link</h2>
+      <label><span class="sr">Choose a link</span><select id="link-select"></select></label>
+    </div>
+    <div class="link-body">
+      <canvas id="snr"></canvas>
+      <div id="budget" class="budget"></div>
+    </div>
+    <div class="snr-key">
+      <span><i class="line obs"></i>observed</span>
+      <span><i class="band fw"></i>Fadewatch p10–p90</span>
+      <span><i class="line pb"></i>persistence (snr-baseline-v1)</span>
+      <span><i class="line truth"></i>what actually happened</span>
+      <span><i class="line closure"></i>closure</span>
+    </div>
+  </section>
+
+  <section class="p pools-p" aria-label="Demand pools">
+    <div class="pools-head">
+      <h2>Pools: capacity against demand</h2>
+      <label class="toggle"><input type="checkbox" id="closed-loop"> Show capacity with Fadewatch's plans executed</label>
+    </div>
+    <div id="pools" class="pools"></div>
+  </section>
+</main>
+
+<main id="backtest" class="doc" hidden></main>
+<main id="findings" class="doc" hidden></main>
+
+<div id="caption" class="caption" hidden></div>
+<div id="loading" class="loading">Loading replay…</div>
+
+<script src="vendor/topojson-client.min.js"></script>
+<script src="vendor/globe.gl.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

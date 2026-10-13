@@ -1,0 +1,885 @@
+{
+  "as_of_utc": "2026-10-10T23:07:10.920936Z",
+  "entities": [
+    {
+      "measurement": "ground_station",
+      "entity_id": "SITE-0da7faea0f45",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "pop_id": "TMPEAZX1"
+      },
+      "fields": {
+        "name": "Phoenix Gateway",
+        "lat_deg": 33.5634,
+        "lon_deg": -112.3375
+      }
+    },
+    {
+      "measurement": "ground_station",
+      "entity_id": "SITE-437a27f30da8",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "pop_id": "ASHNVAX2"
+      },
+      "fields": {
+        "name": "RANDOLPH RIDGE",
+        "lat_deg": 38.7963,
+        "lon_deg": -77.5771
+      }
+    },
+    {
+      "measurement": "ground_station",
+      "entity_id": "SITE-5c44ebc4a84e",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "pop_id": "ASHNVAX2"
+      },
+      "fields": {
+        "name": "O3B1.WMP",
+        "lat_deg": 38.7836,
+        "lon_deg": -77.5733
+      }
+    },
+    {
+      "measurement": "ground_station",
+      "entity_id": "SITE-7576272aee77",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "pop_id": "DLLSTXX1"
+      },
+      "fields": {
+        "name": "Texas Gateway",
+        "lat_deg": 34.218,
+        "lon_deg": -99.3963
+      }
+    },
+    {
+      "measurement": "ground_station",
+      "entity_id": "SITE-9c5100cd2d6c",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "pop_id": "ATLAGAX1"
+      },
+      "fields": {
+        "name": "The Blitz Gateway",
+        "lat_deg": 32.9467,
+        "lon_deg": -84.2619
+      }
+    },
+    {
+      "measurement": "ground_station",
+      "entity_id": "SITE-d7c79f814522",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "pop_id": "DLLSTXX1"
+      },
+      "fields": {
+        "name": "CLFN-1",
+        "lat_deg": 31.8001,
+        "lon_deg": -97.6125
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-0da7faea0f45__ant0",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-0da7faea0f45",
+        "target": "norad-44115"
+      },
+      "fields": {
+        "azimuth_deg": 127.33,
+        "bandwidth_mhz": 452.0,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 17.71,
+        "frequency_ghz": 18.825,
+        "g_t_db_k": 34.343,
+        "slant_range_km": 11156.94,
+        "snr_db": 26.86
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-437a27f30da8__ant0",
+      "observed_at": "2026-10-10T22:05:45Z",
+      "tags": {
+        "source": "SITE-437a27f30da8",
+        "target": "norad-58347"
+      },
+      "fields": {
+        "azimuth_deg": 125.25,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.06,
+        "frequency_ghz": 18.625,
+        "g_t_db_k": 27.069,
+        "slant_range_km": 11883.323,
+        "snr_db": 20.52
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-437a27f30da8__ant1",
+      "observed_at": "2026-10-10T22:10:45Z",
+      "tags": {
+        "source": "SITE-437a27f30da8",
+        "target": "norad-44112"
+      },
+      "fields": {
+        "azimuth_deg": 125.4,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.16,
+        "frequency_ghz": 18.625,
+        "g_t_db_k": 27.069,
+        "slant_range_km": 11873.771,
+        "snr_db": 20.53
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-437a27f30da8__ant2",
+      "observed_at": "2026-10-10T22:35:45Z",
+      "tags": {
+        "source": "SITE-437a27f30da8",
+        "target": "norad-40351"
+      },
+      "fields": {
+        "azimuth_deg": 125.3,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.08,
+        "frequency_ghz": 18.625,
+        "g_t_db_k": 27.069,
+        "slant_range_km": 11881.557,
+        "snr_db": 20.52
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-437a27f30da8__ant3",
+      "observed_at": "2026-10-10T22:59:15Z",
+      "tags": {
+        "source": "SITE-437a27f30da8",
+        "target": "norad-39191"
+      },
+      "fields": {
+        "azimuth_deg": 125.45,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.17,
+        "frequency_ghz": 18.625,
+        "g_t_db_k": 27.069,
+        "slant_range_km": 11867.813,
+        "snr_db": 20.54
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant0",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-62362"
+      },
+      "fields": {
+        "azimuth_deg": 206.05,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 24.67,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 10560.985,
+        "snr_db": 22.67
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant1",
+      "observed_at": "2026-10-10T22:59:30Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-44113"
+      },
+      "fields": {
+        "azimuth_deg": 125.18,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.01,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 11886.307,
+        "snr_db": 21.07
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant2",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-40081"
+      },
+      "fields": {
+        "azimuth_deg": 213.89,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 21.86,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 10793.28,
+        "snr_db": 22.43
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant3",
+      "observed_at": "2026-10-10T22:35:45Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-40351"
+      },
+      "fields": {
+        "azimuth_deg": 125.3,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.09,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 11880.49,
+        "snr_db": 21.08
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant4",
+      "observed_at": "2026-10-10T22:59:30Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-39191"
+      },
+      "fields": {
+        "azimuth_deg": 125.21,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.01,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 11884.217,
+        "snr_db": 21.07
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant5",
+      "observed_at": "2026-10-10T23:01:00Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-39188"
+      },
+      "fields": {
+        "azimuth_deg": 125.36,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.11,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 11877.987,
+        "snr_db": 21.08
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant6",
+      "observed_at": "2026-10-10T23:06:00Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-62363"
+      },
+      "fields": {
+        "azimuth_deg": 125.22,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.02,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 11883.663,
+        "snr_db": 21.07
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-5c44ebc4a84e__ant7",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-5c44ebc4a84e",
+        "target": "norad-40080"
+      },
+      "fields": {
+        "azimuth_deg": 142.23,
+        "bandwidth_mhz": 108.5,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 20.15,
+        "frequency_ghz": 18.48,
+        "g_t_db_k": 27.523,
+        "slant_range_km": 10934.769,
+        "snr_db": 22.29
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-7576272aee77__ant0",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-7576272aee77",
+        "target": "norad-40081"
+      },
+      "fields": {
+        "azimuth_deg": 181.66,
+        "bandwidth_mhz": 20.1535,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 34.56,
+        "frequency_ghz": 19.05,
+        "g_t_db_k": 37.929,
+        "slant_range_km": 9831.107,
+        "snr_db": 33.47
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-7576272aee77__ant1",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-7576272aee77",
+        "target": "norad-43231"
+      },
+      "fields": {
+        "azimuth_deg": 220.96,
+        "bandwidth_mhz": 20.1535,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 24.42,
+        "frequency_ghz": 19.05,
+        "g_t_db_k": 37.929,
+        "slant_range_km": 10584.061,
+        "snr_db": 32.69
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-7576272aee77__ant2",
+      "observed_at": "2026-10-10T23:04:15Z",
+      "tags": {
+        "source": "SITE-7576272aee77",
+        "target": "norad-43234"
+      },
+      "fields": {
+        "azimuth_deg": 119.32,
+        "bandwidth_mhz": 20.1535,
+        "eirp_dbw": 49.7,
+        "elevation_deg": 10.15,
+        "frequency_ghz": 19.05,
+        "g_t_db_k": 37.929,
+        "slant_range_km": 11876.333,
+        "snr_db": 30.97
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-9c5100cd2d6c__ant0",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-9c5100cd2d6c",
+        "target": "norad-62256"
+      },
+      "fields": {
+        "azimuth_deg": 143.84,
+        "bandwidth_mhz": 162.9,
+        "eirp_dbw": 17.79,
+        "elevation_deg": 56.15,
+        "frequency_ghz": 8.2963,
+        "g_t_db_k": 30.361,
+        "slant_range_km": 48821.421,
+        "snr_db": -12.5
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-9c5100cd2d6c__ant1",
+      "observed_at": "2026-10-10T23:01:15Z",
+      "tags": {
+        "source": "SITE-9c5100cd2d6c",
+        "target": "norad-63772"
+      },
+      "fields": {
+        "azimuth_deg": 358.95,
+        "bandwidth_mhz": 162.9,
+        "eirp_dbw": 17.79,
+        "elevation_deg": 11.18,
+        "frequency_ghz": 8.2963,
+        "g_t_db_k": 30.361,
+        "slant_range_km": 2022.715,
+        "snr_db": 14.97
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-d7c79f814522__ant0",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-d7c79f814522",
+        "target": "norad-31573"
+      },
+      "fields": {
+        "azimuth_deg": 290.98,
+        "bandwidth_mhz": 1.23,
+        "eirp_dbw": 17.3,
+        "elevation_deg": 13.01,
+        "frequency_ghz": 6.9625,
+        "g_t_db_k": 29.833,
+        "slant_range_km": 3535.662,
+        "snr_db": 12.72
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-d7c79f814522__ant1",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-d7c79f814522",
+        "target": "norad-37740"
+      },
+      "fields": {
+        "azimuth_deg": 24.95,
+        "bandwidth_mhz": 1.23,
+        "eirp_dbw": 17.3,
+        "elevation_deg": 16.26,
+        "frequency_ghz": 6.9625,
+        "g_t_db_k": 29.833,
+        "slant_range_km": 3040.727,
+        "snr_db": 14.06
+      }
+    },
+    {
+      "measurement": "link",
+      "entity_id": "SITE-d7c79f814522__ant2",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {
+        "source": "SITE-d7c79f814522",
+        "target": "norad-38044"
+      },
+      "fields": {
+        "azimuth_deg": 171.23,
+        "bandwidth_mhz": 1.23,
+        "eirp_dbw": 17.3,
+        "elevation_deg": 26.45,
+        "frequency_ghz": 6.9625,
+        "g_t_db_k": 29.833,
+        "slant_range_km": 2458.459,
+        "snr_db": 15.97
+      }
+    },
+    {
+      "measurement": "pool_interval",
+      "entity_id": "ASHNVAX2",
+      "observed_at": "2026-10-10T23:00:00Z",
+      "tags": {
+        "boundary_id": "scene-pop",
+        "direction": "downlink",
+        "evidence_kind": "synthetic_offered"
+      },
+      "fields": {
+        "inlet_bytes": 9591470498.0
+      }
+    },
+    {
+      "measurement": "pool_interval",
+      "entity_id": "ATLAGAX1",
+      "observed_at": "2026-10-10T23:00:00Z",
+      "tags": {
+        "boundary_id": "scene-pop",
+        "direction": "downlink",
+        "evidence_kind": "synthetic_offered"
+      },
+      "fields": {
+        "inlet_bytes": 8190929589.0
+      }
+    },
+    {
+      "measurement": "pool_interval",
+      "entity_id": "DLLSTXX1",
+      "observed_at": "2026-10-10T23:00:00Z",
+      "tags": {
+        "boundary_id": "scene-pop",
+        "direction": "downlink",
+        "evidence_kind": "synthetic_offered"
+      },
+      "fields": {
+        "inlet_bytes": 7170037698.0
+      }
+    },
+    {
+      "measurement": "pool_interval",
+      "entity_id": "TMPEAZX1",
+      "observed_at": "2026-10-10T23:00:00Z",
+      "tags": {
+        "boundary_id": "scene-pop",
+        "direction": "downlink",
+        "evidence_kind": "synthetic_offered"
+      },
+      "fields": {
+        "inlet_bytes": 5689662929.0
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-31573",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M069"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-36037",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "PROBA-2"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-37191",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M077"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-37192",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M075"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-37740",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M088"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-37741",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M091"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-37742",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M085"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-37743",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M081"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-38042",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M082"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-38044",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M090"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-38045",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M086"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39072",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M097"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39073",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M093"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39074",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M094"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39075",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M096"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39077",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "GLOBALSTAR-M095"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39188",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM5"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39190",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM2"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-39191",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-PFM"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-40079",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM3"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-40080",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM7"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-40081",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM6"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-40082",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM8"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-40351",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM9"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-43231",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM15"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-43234",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM13"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-44112",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM20"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-44113",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM19"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-44114",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM17"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-44115",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-FM18"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-54756",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-MPOWER-F2"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-56368",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-MPOWER-F3"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-58346",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-MPOWER-F5"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-58347",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-MPOWER-F6"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-62256",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "PROBA-3-CSC"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-62261",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "SENTINEL-1C"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-62362",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-MPOWER-F7"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-62363",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "O3B-MPOWER-F8"
+      }
+    },
+    {
+      "measurement": "satellite",
+      "entity_id": "norad-63772",
+      "observed_at": "2026-10-10T23:07:00Z",
+      "tags": {},
+      "fields": {
+        "name": "BIOMASS"
+      }
+    }
+  ]
+}
